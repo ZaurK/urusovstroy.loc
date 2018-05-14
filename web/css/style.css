@@ -949,8 +949,7 @@ article {
     box-shadow: none;
     border: 2px solid rgba(0, 0, 0, 0.8); }
 
-input[type="text"] {
-  height: 50px; }
+
 
 .form-group {
   margin-bottom: 30px; }
@@ -1431,4 +1430,7 @@ a.limore{
 }
 a.liless{
 	cursor: pointer;
+}
+.logout{
+	margin-top:10px;
 }

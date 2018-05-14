@@ -71,13 +71,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+		$this->layout='main0';
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->redirect(['site/photo']);
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect(['site/photo']);
         }
 
         $model->password = '';
@@ -95,7 +96,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect(['site/login']);
     }
 
     /**
@@ -103,17 +104,10 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionContact()
+    public function actionPhoto()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
+		$this->layout='main0';
+        return $this->render('photo');
     }
 
     /**
@@ -121,8 +115,9 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionVideo()
     {
-        return $this->render('about');
+		$this->layout='main0';
+        return $this->render('video');
     }
 }
