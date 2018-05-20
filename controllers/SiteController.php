@@ -73,12 +73,12 @@ class SiteController extends Controller
     {
 		$this->layout='main0';
         if (!Yii::$app->user->isGuest) {
-            return $this->redirect(['site/photo']);
+            return $this->redirect(['admin/category/index']);
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['site/photo']);
+            return $this->redirect(['admin/category/index']);
         }
 
         $model->password = '';
@@ -104,20 +104,21 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionPhoto()
+ /*   public function actionPhoto()
     {
 		$this->layout='main0';
         return $this->render('photo');
     }
-
+*/
     /**
      * Displays about page.
      *
      * @return string
      */
-    public function actionVideo()
+/*   public function actionVideo()
     {
 		$this->layout='main0';
         return $this->render('video');
     }
+	*/
 }

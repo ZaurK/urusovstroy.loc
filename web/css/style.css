@@ -1350,6 +1350,9 @@ article {
 .margin-bottom36{
 	margin-bottom:36px;
 }
+.margin-bottom72{
+	margin-bottom:72px;
+}
 
 h1{
 	font-weight:600;
@@ -1431,6 +1434,27 @@ a.limore{
 a.liless{
 	cursor: pointer;
 }
-.logout{
-	margin-top:10px;
+.photorow{
+	width:100%;
+}
+.owl-carousel{
+	display:block;
+}
+.owl-carousel .item-video {
+    height: 300px;
+}
+ .photorow .owl-carousel .item{
+	height:250px;
+}
+
+
+.liadvant li{
+    list-style-type:none;
+		font-size:1.2em;;
+}
+.liadvant li i {
+    padding-right: 10px;
+    color: #F9690E;
+	font-size:1.4em;
+	font-weight:800;
 }

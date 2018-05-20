@@ -5,10 +5,45 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use app\components\getPhotos;
+use app\components\getVideos;
 
 $this->title = 'Сайт';
 ?>
-
+<?php
+echo newerton\fancybox\FancyBox::widget([
+    'target' => 'a[rel=fancybox]',
+    'helpers' => true,
+    'mouse' => true,
+    'config' => [
+        'maxWidth' => '90%',
+        'maxHeight' => '90%',
+        'playSpeed' => 7000,
+        'padding' => 10,
+        'fitToView' => false,
+        'width' => '70%',
+        'height' => '70%',
+        'autoSize' => false,
+        'closeClick' => false,
+        'openEffect' => 'elastic',
+        'closeEffect' => 'elastic',
+        'prevEffect' => 'elastic',
+        'nextEffect' => 'elastic',
+        'closeBtn' => false,
+        'openOpacity' => true,
+        'helpers' => [
+            'title' => ['type' => 'inner'],
+            'buttons' => false,
+            'thumbs' => false,
+            'overlay' => [
+                'css' => [
+                    'background' => 'rgba(0, 0, 0, 0.8)',
+                ]
+            ]
+        ],
+    ]
+]);
+?>	    
         <nav class="colorlib-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container">
@@ -87,7 +122,7 @@ $this->title = 'Сайт';
 
         <div id="design-project">
 		    <div class="container">
-				<div class="row margin-bottom36">
+				<div class="row margin-bottom72">
 				    <div class="col-md-12 text-center">
 					    <h3>Наша компания «URUSOV-STROY» предлагает следующие услуги:</h3>
 					</div>
@@ -97,7 +132,7 @@ $this->title = 'Сайт';
 					    <h1>Дизайн-проект</h1>
 					</div>
 		        </div>
-				<div class="row margin-bottom36">
+				<div class="row margin-bottom72">
 				    <div class="col-md-6 text-center ">
 					    <a href="#"  id="trigger1">- Для чего нужен дизайн-проект?</a>
 					</div>
@@ -105,17 +140,17 @@ $this->title = 'Сайт';
 					    <a href="#" id='trigger1'>- Какие преимущества у дизайн-проекта?</a>
 					</div>
 		        </div>
-				<div id="appiarbox1" class="row appiar-box margin-bottom36">
+				<div id="appiarbox1" class="row appiar-box margin-bottom72">
 				    <p>Цель дизайна интерьера – создание обстановки, в которой будет комфортно всем обитателям дома и их гостям. Ваши требования и пожелания должны быть основой для первоначальной планировки и функционального назначения помещений. Обращаясь к дизайнеру, Вы гарантируете результат, в котором будут объединены Ваши пожелания и современные тенденции, соблюдены требования к электрическим, строительным и ремонтно-отделочным работам. 
 Поэтому первым шагом на пути к интерьеру мечты всегда является создание дизайн-проекта.</p>
 
 				</div>
 				<div class="row margin-bottom36">
-				    <div class="col-md-4 margin-bottom36" id="left" >
+				    <div class="col-md-4 margin-bottom72" id="left" >
 				    <div class="service-block">					
 				       <div class="service-body">					
 					    <h3 class="text-center">Технический дизайн-проект</h3>
-                            <ul>
+                            <ul contenteditable="true">
 							    <li>Обмерный план;</li>
 							    <li>2 варианта планировки;</li>
 							    <li>План демонтажа перегородок;</li>
@@ -135,12 +170,12 @@ $this->title = 'Сайт';
 							
 					    </div>
 						<div class="service-footer">
-						<h2 class="price text-center">от 500р. м.кв.</h2>
+						<h2 class="price text-center" contenteditable="true">от 500р. м.кв.</h2>
 						    <div class="btn">Заказать</div>
 						</div>
 					</div>
 					</div>
-					<div class="col-md-4  margin-bottom36" id="center">
+					<div class="col-md-4  margin-bottom72" id="center">
 					  <div class="service-block">
                       <div class="service-body">					  
 					    <h3 class="text-center">Полный дизайн-проект</h3>
@@ -171,7 +206,7 @@ $this->title = 'Сайт';
 						</div>
 					  </div>
 					</div>
-					<div class="col-md-4  margin-bottom36" id="right">
+					<div class="col-md-4  margin-bottom72" id="right">
 					  <div class="service-block">
                       <div class="service-body">					  
 					    <h3 class="text-center">VIP дизайн-проект</h3>
@@ -205,8 +240,9 @@ $this->title = 'Сайт';
 					</div>
 				</div>
 		    </div>
+			
 		</div>
-
+        
 
         <div id="remont-project">
 		    <div class="container">
@@ -217,7 +253,7 @@ $this->title = 'Сайт';
 					    <h1>Ремонт квартир и домов</h1>
 					</div>
 		        </div>
-				<div class="row margin-bottom36">
+				<div class="row margin-bottom72">
 				    <div class="col-md-12 text-center ">
 					    <p>Какой же сделать ремонт?<br>
            Ремонт – понятие растяжимое… Какой же сделать ремонт: базовый; капитальный; VIP ремонт с составлением дизайн-проекта?<br>
@@ -227,8 +263,8 @@ $this->title = 'Сайт';
 					
 		        </div>
 				
-				<div class="row margin-bottom36">
-				    <div class="col-md-4 margin-bottom36" id="left" >
+				<div class="row margin-bottom72">
+				    <div class="col-md-4 margin-bottom72" id="left" >
 				    <div class="service-block">					
 				       <div class="service-body">					
 					    <h3 class="text-center">Базовый ремонт</h3>
@@ -254,7 +290,7 @@ $this->title = 'Сайт';
 						</div>
 					</div>
 					</div>
-					<div class="col-md-4  margin-bottom36" id="center">
+					<div class="col-md-4  margin-bottom72" id="center">
 					  <div class="service-block">
                       <div class="service-body">					  
 					    <h3 class="text-center">Капитальный ремонт</h3>
@@ -289,7 +325,7 @@ $this->title = 'Сайт';
 						</div>
 					  </div>
 					</div>
-					<div class="col-md-4  margin-bottom36" id="right">
+					<div class="col-md-4  margin-bottom72" id="right">
 					  <div class="service-block">
                       <div class="service-body">					  
 					    <h3 class="text-center">VIP ремонт</h3>
@@ -327,6 +363,37 @@ $this->title = 'Сайт';
 				</div>
 		    </div>
 		</div>
+				
+			<div class="videorow">			
+		        <?=getVideos::getLinks()?>
+		    </div>
+         <div id="advantages">
+		    <div class="container">
+				<div class="row margin-bottom72">
+		        </div>
+				<div class="row">
+				    <div class="col-md-12 text-center animate-box">
+					    <h1>Наши преимущества</h1>
+					</div>
+		        </div>
+				<div class="row margin-bottom72">
+				<ul class="liadvant">
+				<li><i class="icon-check"></i>Работаем без предоплаты</li>
+                <li><i class="icon-check"></i>Весь процесс работы берем на себя: от дизайн-проекта до вывоза мусора.</li>
+                <li><i class="icon-check"></i>Работы на объекте выполняются узкоспециализированными специалистами</li>
+                <li><i class="icon-check"></i>Четкое соблюдение сроков</li>
+                <li><i class="icon-check"></i>Онлайн трансляция ремонта</li>
+                <li><i class="icon-check"></i>Фото-отчет с объекта каждые 2-3 дня</li>
+                <li><i class="icon-check"></i>акупка материалов</li>
+                <li><i class="icon-check"></i>Заключение официального договора</li>
+				</ul>
+
+				</div>
+			</div>
+		 </div>
+		 <div class="photorow">			
+		        <?=getPhotos::getLinks()?>
+		    </div>
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="container">
 				<div class="row row-pb-md">

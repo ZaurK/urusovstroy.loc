@@ -8,9 +8,9 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use app\assets\AppAssetAdmin;
 
-AppAsset::register($this);
+AppAssetAdmin::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -37,6 +37,8 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'На сайт', 'url' => ['/site/index'], 'linkOptions' => ['target'=>'_blank'],],
+            ['label' => 'Фото', 'url' => ['photo/index']],
+            ['label' => 'Видео', 'url' => ['video/index']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Вход', 'url' => ['/site/login']]
             ) : (
