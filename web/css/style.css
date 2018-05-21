@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6, figure {
     transform: scale(1.1); }
 
 #colorlib-hero {
-  min-height: 700px;
+  min-height: 850px;
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left; }
@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6, figure {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom center;
-        min-height: 650px;
+        min-height: 800px;
         position: relative; }
         #colorlib-hero .flexslider .slides li .overlay {
           position: absolute;
@@ -1199,7 +1199,7 @@ article {
     width: 50px;
     height: 50px;
     display: table;
-    background: #ffcd00;
+    background: #F9690E;
     color: #fff;
     text-align: center;
     -webkit-border-radius: 4px;

@@ -53,25 +53,25 @@ echo newerton\fancybox\FancyBox::widget([
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li></span><a href="index.html">Главная</a></li>
 								<li class="has-dropdown">
-									<a href="work.html">Услуги</a>
+									<a href="#">Услуги</a>
 									<ul class="dropdown">
-										<li><a href="#">Дизайн-проект</a></li>
-										<li><a href="#">Ремонт квартир и домов</a></li>
+										<li><a href="#design-project" id="adesignproject">Дизайн-проект</a></li>
+										<li><a href="#remont-project" id="aremontproject">Ремонт квартир и домов</a></li>
 										<li><a href="#">Изготовление корпусной мебели на заказ</a></li>
 									</ul>
 								</li>
-								<li><a href="blog.html">Преимущества</a></li>
-								<li><a href="about.html">О компании</a></li>
-								<li><a href="contact.html">Контакты</a></li>
+								<li><a href="#advantages" id="aadvantages">Преимущества</a></li>
+								<li><a href="#" id="avideorow">Видео</a></li>
+								<li><a href="#photorow" id="aphotorow">Фото</a></li>
+								<li><a href="#colorlib-footer" id="colorlibfooter">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
-		<aside id="colorlib-hero">
+		<div id="colorlib-hero">
 			<div class="flexslider">
 				<ul class="slides">
 			   	<li style="background-image: url(<?=Yii::$app->homeUrl?>/images/img_bg_1.jpg);">
@@ -116,13 +116,29 @@ echo newerton\fancybox\FancyBox::widget([
 			   		
 			  	</ul>
 		  	</div>
-		</aside>
+		</div>
 
 	
+        <div id="">
+		    <div class="container">
+			    <div class="row margin-bottom72">
+				     <div class="col-md-4 text-center">
+					     <img src="<?=Yii::$app->homeUrl?>/images/urusov-stroy.jpg">
+					 </div>
+				     <div class="col-md-8 text-left">
+		<p>
+		    Обсуждая ремонт нашего жилья, мы часто сталкиваемся с выражениями «ремонт под ключ» или «комплексный ремонт», подразумевающие как бы некий вариант проведения ремонтно-отделочных работ.
+Компания «URUSOV-STROY» предлагает проведение комплексных мероприятий, которые позволяют полностью обустроить любое помещение, а заодно и реализовать дизайнерские идеи, которые становятся основой качества и комфортного проживания в новом доме.
+На сегодняшний день у нас есть свои дизайнеры и бригады для ремонтных работ. Ремонт от     компании «URUSOV-STROY» выгоден для Вас – заказывая дизайн-проект и его реализацию, Вы получаете полный сервис, начиная с разработки проекта, комплектации его по выгодным ценам, заканчивая профессиональным воплощением его в жизнь. Исключены ошибки в проектировании, так как дизайнеры работают в тесной связке с техническим отделом.
 
+		</p>
+		             </div>
+		        </div>
+		    </div>
+		</div>
         <div id="design-project">
 		    <div class="container">
-				<div class="row margin-bottom72">
+				<div class="row margin-bottom36">
 				    <div class="col-md-12 text-center">
 					    <h3>Наша компания «URUSOV-STROY» предлагает следующие услуги:</h3>
 					</div>
@@ -150,7 +166,7 @@ echo newerton\fancybox\FancyBox::widget([
 				    <div class="service-block">					
 				       <div class="service-body">					
 					    <h3 class="text-center">Технический дизайн-проект</h3>
-                            <ul contenteditable="true">
+                            <ul>
 							    <li>Обмерный план;</li>
 							    <li>2 варианта планировки;</li>
 							    <li>План демонтажа перегородок;</li>
@@ -170,7 +186,7 @@ echo newerton\fancybox\FancyBox::widget([
 							
 					    </div>
 						<div class="service-footer">
-						<h2 class="price text-center" contenteditable="true">от 500р. м.кв.</h2>
+						<h2 class="price text-center">от 500р. м.кв.</h2>
 						    <div class="btn">Заказать</div>
 						</div>
 					</div>
@@ -364,7 +380,7 @@ echo newerton\fancybox\FancyBox::widget([
 		    </div>
 		</div>
 				
-			<div class="videorow">			
+			<div class="videorow" id="videorow">			
 		        <?=getVideos::getLinks()?>
 		    </div>
          <div id="advantages">
@@ -391,14 +407,14 @@ echo newerton\fancybox\FancyBox::widget([
 				</div>
 			</div>
 		 </div>
-		 <div class="photorow">			
+		 <div class="photorow" id="photorow">			
 		        <?=getPhotos::getLinks()?>
 		    </div>
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">
-						<h4>About Company</h4>
+						<h4>О нас</h4>
 						<p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
 						<p>
 							<ul class="colorlib-social-icons">

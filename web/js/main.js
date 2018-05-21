@@ -190,6 +190,7 @@
 	};
 
 
+
 	// Loading page
 	var loaderPage = function() {
 		$(".colorlib-loader").fadeOut("slow");
@@ -239,17 +240,7 @@
 
 	};
 
-	var parallax = function() {
-
-		if ( !isMobile.any() ) {
-			$(window).stellar({
-				horizontalScrolling: false,
-				hideDistantElements: false, 
-				responsive: true
-
-			});
-		}
-	};
+	
 
 	// Owl Carousel
 	var owlCrouselFeatureSlide = function() {
@@ -304,7 +295,7 @@
 		goToTop();
 		loaderPage();
 		counterWayPoint();
-		parallax();
+		
 		owlCrouselFeatureSlide();
 	});
 

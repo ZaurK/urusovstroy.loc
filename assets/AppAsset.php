@@ -34,13 +34,14 @@ class AppAsset extends AssetBundle
 	    'js/jquery.easing.1.3.js',
 	    'js/bootstrap.min.js',
 	    'js/jquery.waypoints.min.js',
-	    'js/jquery.stellar.min.js',
+	    //'js/jquery.stellar.min.js',
 	    'js/jquery.flexslider-min.js',
 	    'js/owl.carousel.js',
 	    //'js/jquery.magnific-popup.min.js',
 	    //'js/magnific-popup-options.js',
 	    'js/main.js',
 	    'js/jsscripts.js',
+	    'js/scroll.js',
     ];
     public $depends = [
         //'yii\web\YiiAsset',
