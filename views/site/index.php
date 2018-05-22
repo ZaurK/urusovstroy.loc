@@ -10,40 +10,7 @@ use app\components\getVideos;
 
 $this->title = 'Сайт';
 ?>
-<?php
-echo newerton\fancybox\FancyBox::widget([
-    'target' => 'a[rel=fancybox]',
-    'helpers' => true,
-    'mouse' => true,
-    'config' => [
-        'maxWidth' => '90%',
-        'maxHeight' => '90%',
-        'playSpeed' => 7000,
-        'padding' => 10,
-        'fitToView' => false,
-        'width' => '70%',
-        'height' => '70%',
-        'autoSize' => false,
-        'closeClick' => false,
-        'openEffect' => 'elastic',
-        'closeEffect' => 'elastic',
-        'prevEffect' => 'elastic',
-        'nextEffect' => 'elastic',
-        'closeBtn' => false,
-        'openOpacity' => true,
-        'helpers' => [
-            'title' => ['type' => 'inner'],
-            'buttons' => false,
-            'thumbs' => false,
-            'overlay' => [
-                'css' => [
-                    'background' => 'rgba(0, 0, 0, 0.8)',
-                ]
-            ]
-        ],
-    ]
-]);
-?>	    
+
         <nav class="colorlib-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container">
@@ -150,13 +117,13 @@ echo newerton\fancybox\FancyBox::widget([
 		        </div>
 				<div class="row margin-bottom72">
 				    <div class="col-md-6 text-center ">
-					    <a href="#"  id="trigger1">- Для чего нужен дизайн-проект?</a>
+					    <a class="trigger" onclick="appiarbox1()">- Для чего нужен дизайн-проект?</a>
 					</div>
 					<div class="col-md-6 text-center animate-box">
-					    <a href="#" id='trigger1'>- Какие преимущества у дизайн-проекта?</a>
+					    <a href="#" id='trigger2'>- Какие преимущества у дизайн-проекта?</a>
 					</div>
 		        </div>
-				<div id="appiarbox1" class="row appiar-box margin-bottom72">
+				<div id="appiarbox1" class="row appiarbox1 margin-bottom72">
 				    <p>Цель дизайна интерьера – создание обстановки, в которой будет комфортно всем обитателям дома и их гостям. Ваши требования и пожелания должны быть основой для первоначальной планировки и функционального назначения помещений. Обращаясь к дизайнеру, Вы гарантируете результат, в котором будут объединены Ваши пожелания и современные тенденции, соблюдены требования к электрическим, строительным и ремонтно-отделочным работам. 
 Поэтому первым шагом на пути к интерьеру мечты всегда является создание дизайн-проекта.</p>
 
@@ -407,75 +374,81 @@ echo newerton\fancybox\FancyBox::widget([
 				</div>
 			</div>
 		 </div>
-		 <div class="photorow" id="photorow">			
+		 <div class="photorow margin-bottom72" id="photorow">			
 		        <?=getPhotos::getLinks()?>
 		    </div>
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="container">
 				<div class="row row-pb-md">
-					<div class="col-md-3 colorlib-widget">
-						<h4>О нас</h4>
-						<p>Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+					<div class="col-md-4 colorlib-widget">
+						<h4>Мы в соцсетях</h4>
+						<p>Присоединяйтесь к нам в соцсетях и будьте в курсе новостей!</p>
 						<p>
 							<ul class="colorlib-social-icons">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin"></i></a></li>
-								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+								<li><a href="#"><i class="icon-instagram"></i></a></li>
+								<li><a href="#"><i class="icon-vk"></i></a></li>
+								<li><a href="#"><i class="icon-facebook2"></i></a></li>
+
 							</ul>
 						</p>
 					</div>
-					<div class="col-md-3 col-md-push-1">
-						<h4>Recent Blog</h4>
-						<ul class="colorlib-footer-links">
-							<li>
-								<span>&mdash; 20 Jan, 2017</span>
-								<a href="#">Results of Annual General Meeting</a>
-							</li>
-							<li>
-								<span>&mdash; 19 Jan, 2017</span>
-								<a href="#">Construction was awarded with “The Best Construction Company” prize</a>
-							</li>
-							<li>
-								<span>&mdash; 18 Jan, 2017</span>
-								<a href="#">New Saint Michael’s College Residence Hall Buzzing with Student Activity</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-3 col-md-push-1 colorlib-widget">
-						<h4>Information</h4>
+					
+					<div class="col-md-4  col-md-push-1 colorlib-widget">
+						<h4>Информация</h4>
 						<p>
 							<ul class="colorlib-footer-links">
-								<li><a href="#"><i class="icon-check"></i> Our Company</a></li>
-								<li><a href="#"><i class="icon-check"></i> Certification</a></li>
-								<li><a href="#"><i class="icon-check"></i> Our services</a></li>
-								<li><a href="#"><i class="icon-check"></i> Career</a></li>
-								<li><a href="#"><i class="icon-check"></i> Core Values</a></li>
-								<li><a href="#"><i class="icon-check"></i> Company History</a></li>
-								<li><a href="#"><i class="icon-check"></i> FAQ</a></li>
+								<li><a href="#" id="adesignproject"><i class="icon-check"></i> Услуги</a></li>
+								<li><a href="#" id="aadvantages"><i class="icon-check"></i> Преимущества</a></li>
+								<li><a href="#" id="avideorow"><i class="icon-check"></i> Видео</a></li>
+								<li><a href="#" id="aphotorow"><i class="icon-check"></i> Фото</a></li>
+
 							</ul>
 						</p>
 					</div>
+					
+							
 
-					<div class="col-md-3 col-md-push-1">
-						<h4>Contact Info</h4>
+					<div class="col-md-4 col-md-push-1">
+						<h4>Контакты</h4>
 						<ul class="colorlib-footer-links">
-							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li><a href="tel://1234567920"><i class="icon-phone"></i> + 1235 2355 98</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> info@yoursite.com</a></li>
-							<li><a href="http://luxehotel.com"><i class="icon-location4"></i> yourwebsite.com</a></li>
+							<li><a href="tel://1234567920"><i class="icon-mobile2"></i> + 7 (929) 885 75 75</a></li>
+							<li><a href="mailto:info@yoursite.com"><i class="icon-mail2"></i> urusovstroy@mail.ru</a></li>							
 						</ul>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<p>
-							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-     					<small class="block">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.  <br>This template is made with <i class="icon-heart3" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></small>
-    					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
-					</div>
-				</div>
+				
 			</div>
 		</footer>
-		
+<?php
+echo newerton\fancybox\FancyBox::widget([
+    'target' => 'a[rel=fancybox]',
+    'helpers' => true,
+    'mouse' => true,
+    'config' => [
+        'maxWidth' => '90%',
+        'maxHeight' => '90%',
+        'playSpeed' => 7000,
+        'padding' => 10,
+        'fitToView' => false,
+        'width' => '70%',
+        'height' => '70%',
+        'autoSize' => false,
+        'closeClick' => false,
+        'openEffect' => 'elastic',
+        'closeEffect' => 'elastic',
+        'prevEffect' => 'elastic',
+        'nextEffect' => 'elastic',
+        'closeBtn' => false,
+        'openOpacity' => true,
+        'helpers' => [
+            'title' => ['type' => 'inner'],
+            'buttons' => false,
+            'thumbs' => false,
+            'overlay' => [
+                'css' => [
+                    'background' => 'rgba(0, 0, 0, 0.8)',
+                ]
+            ]
+        ],
+    ]
+]);
+?>	    		
