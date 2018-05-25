@@ -1,4 +1,60 @@
 
+function appiarbox1()
+{
+ var a = document.getElementById('appbox1');
+ var b = document.getElementById('appbox2');
+  if ( a.style.display == 'none' ){
+    a.style.display = 'block'
+	b.style.display = 'none'
+  }else{
+    a.style.display = 'none'
+	b.style.display = 'none'
+	}
+ 
+}
+function appiarbox2()
+{
+ var a = document.getElementById('appbox1');
+ var b = document.getElementById('appbox2');
+  if ( b.style.display == 'none' ){
+	a.style.display = 'none'
+    b.style.display = 'block'
+  }else{
+	a.style.display = 'none'
+    b.style.display = 'none'
+	}
+ 
+}
+function appiarbox3()
+{
+ var a = document.getElementById('appbox3');
+  if ( a.style.display == 'none' ){
+    a.style.display = 'block'
+  } else{
+    a.style.display = 'none'
+	}
+ 
+}
+
+function hidebox12()
+{
+ var a = document.getElementById('appbox1');
+ var b = document.getElementById('appbox2');
+  if ( b.style.display == 'block' || a.style.display == 'block'){
+	a.style.display = 'none'
+    b.style.display = 'none'
+  }
+ 
+}
+function hidebox3()
+{
+ var a = document.getElementById('appbox3');
+  if (a.style.display == 'block'){
+	a.style.display = 'none'
+  }
+ 
+}
+
 function techdown()
 {
   var a = document.getElementById('tech-dropdown');
@@ -78,16 +134,7 @@ function vipdown()
 	}
 }
 
-function appiarbox1()
-{
-   var apbox = document.getElementById('appiarbox1');  
-     if(apbox.style.display == 'none'){
-		 apbox.style.display == 'block';
-	 }else{
-		 apbox.style.display == 'block';
-	 }
- 
-}
+
 
 
 $('.owl-carousel').owlCarousel({

@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
+	    'css/montserrat.css',
         'css/animate.css',
         'css/icomoon.css',
         'css/bootstrap.css',
@@ -28,6 +29,7 @@ class AppAsset extends AssetBundle
         'css/owl.carousel.css',
         'css/owl.theme.css',
         'css/style.css',
+        
     ];
     public $js = [
 	    'js/modernizr-2.6.2.min.js',

@@ -8,7 +8,7 @@ use yii\bootstrap\NavBar;
 use app\components\getPhotos;
 use app\components\getVideos;
 
-$this->title = 'Сайт';
+$this->title = 'URUSOV-STROY | Ремонт квартир, дизайн интерьера, Нальчик ';
 ?>
 
         <nav class="colorlib-nav" role="navigation">
@@ -47,8 +47,9 @@ $this->title = 'Сайт';
 			   			<div class="row">
 				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   				<div class="slider-text-inner text-center">
-				   					<h2> Мы предлагаем разработать</h2>
+				   					<h2>Мы предлагаем разработать</h2>
 				   					<h1>Дизайн Вашего интерьера</h1>
+									 <a class="btn" data-toggle="modal" data-target="#myModal3">Заказать звонок</a>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -62,6 +63,7 @@ $this->title = 'Сайт';
 				   				<div class="slider-text-inner text-center">
 				   					<h2>Также мы предлагаем провести</h2>
 				   					<h1>Ремонт Вашей квартиры</h1>
+									<a class="btn" data-toggle="modal" data-target="#myModal3">Заказать звонок</a>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -69,12 +71,13 @@ $this->title = 'Сайт';
 			   	</li>
 			   	<li style="background-image: url(<?=Yii::$app->homeUrl?>/images/img_bg_3.jpg);">
 			   		<div class="overlay"></div>
-			   		<div class="container-fluids">
+			   		<div class="container-fluid">
 			   			<div class="row">
 				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<h2>Плюс ко всему подберем</h2>
 				   					<h1>Мебель под интерьер</h1>
+									<a class="btn" data-toggle="modal" data-target="#myModal3">Заказать звонок</a>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -119,15 +122,21 @@ $this->title = 'Сайт';
 				    <div class="col-md-6 text-center ">
 					    <a class="trigger" onclick="appiarbox1()">- Для чего нужен дизайн-проект?</a>
 					</div>
-					<div class="col-md-6 text-center animate-box">
-					    <a href="#" id='trigger2'>- Какие преимущества у дизайн-проекта?</a>
-					</div>
-		        </div>
-				<div id="appiarbox1" class="row appiarbox1 margin-bottom72">
-				    <p>Цель дизайна интерьера – создание обстановки, в которой будет комфортно всем обитателям дома и их гостям. Ваши требования и пожелания должны быть основой для первоначальной планировки и функционального назначения помещений. Обращаясь к дизайнеру, Вы гарантируете результат, в котором будут объединены Ваши пожелания и современные тенденции, соблюдены требования к электрическим, строительным и ремонтно-отделочным работам. 
-Поэтому первым шагом на пути к интерьеру мечты всегда является создание дизайн-проекта.</p>
-
-				</div>
+					<div class="col-md-6 text-center ">
+                        <a class="trigger" onclick="appiarbox2()">- Какие преимущества у дизайн-проекта?</a>						
+		            </div>
+                </div>
+<div class="row appbox margin-bottom72" id="appbox1" style="display:none"><strong>Цель дизайна интерьера</strong> – создание обстановки, в которой будет комфортно всем обитателям дома и их гостям. Ваши требования и пожелания должны быть основой для первоначальной планировки и функционального назначения помещений. Обращаясь к дизайнеру, Вы гарантируете результат, в котором будут объединены Ваши пожелания и современные тенденции, соблюдены требования к электрическим, строительным и ремонтно-отделочным работам. 
+Поэтому первым шагом на пути к интерьеру мечты всегда является создание дизайн-проекта.<br><br>
+<a class="triggerw liless" onclick="hidebox12()">Свернуть<span class="icon-arrow-up2"></span></a>
+</div>							    
+<div class="row appbox margin-bottom72" id="appbox2" style="display:none">
+<strong>Экономия денег.</strong> Вы будете иметь представление о стоимости всех необходимых работ и избавите себя от незапланированных затрат в будущем.<br>
+<strong>Готовый визуальный образ.</strong> У Вас появляется возможность увидеть интерьер своей будущей квартиры и понять, насколько точно она соответствует Вашим вкусовым предпочтениям.<br>
+<strong>Эффективность и безопасность.</strong> Специалисты предоставляют Вам пакет технической документации, в который входят схемы перепланировки, электрообеспечения квартиры, зонирования и т.д. Все это позволит провести ремонтные работы более эффективно, предоставит Вам возможность безопасной эксплуатации квартиры, после завершения в ней ремонта.<br><br>
+<a class="triggerw liless" onclick="hidebox12()">Свернуть<span class="icon-arrow-up2"></span></a>
+</div>
+				
 				<div class="row margin-bottom36">
 				    <div class="col-md-4 margin-bottom72" id="left" >
 				    <div class="service-block">					
@@ -154,7 +163,7 @@ $this->title = 'Сайт';
 					    </div>
 						<div class="service-footer">
 						<h2 class="price text-center">от 500р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+							<a class="btn" data-toggle="modal" data-target="#myModal">Заказать</a>
 						</div>
 					</div>
 					</div>
@@ -185,7 +194,7 @@ $this->title = 'Сайт';
 					  </div>
 					  <div class="service-footer">
 					  <h2 class="price text-center">от 1000р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+						    <a class="btn" data-toggle="modal" data-target="#myModal">Заказать</a>
 						</div>
 					  </div>
 					</div>
@@ -217,7 +226,7 @@ $this->title = 'Сайт';
 					  </div>
 					   <div class="service-footer">
 					   <h2 class="price text-center">от 1500р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+						    <a class="btn" data-toggle="modal" data-target="#myModal">Заказать</a>
 						</div>
 					  </div>
 					</div>
@@ -237,10 +246,17 @@ $this->title = 'Сайт';
 					</div>
 		        </div>
 				<div class="row margin-bottom72">
-				    <div class="col-md-12 text-center ">
-					    <p>Какой же сделать ремонт?<br>
-           Ремонт – понятие растяжимое… Какой же сделать ремонт: базовый; капитальный; VIP ремонт с составлением дизайн-проекта?<br>
+				    <div class="col-md-12 text-center">
+					    <a class="trigger" onclick="appiarbox3()">- Какой же сделать ремонт?</a>
+					</div>
+                </div>
+				<div class="row">
+				    <div class="col-md-12">						
+						<div class="row appbox margin-bottom72" id="appbox3" style="display:none">
+           <strong>Ремонт – понятие растяжимое…</strong> Какой же сделать ремонт: базовый; капитальный; VIP ремонт с составлением дизайн-проекта?<br>
 		   Тут, конечно, все зависит не только от Вашего желания, но и от Ваших финансовых возможностей, так как ремонт – дело очень расходное.
+		   <a class="triggerw liless" onclick="hidebox3()">Свернуть<span class="icon-arrow-up2"></span></a>
+		   </div>
 </p>
 					</div>
 					
@@ -269,7 +285,7 @@ $this->title = 'Сайт';
 					    </div>
 						<div class="service-footer">
 						<h2 class="price text-center">от 4000р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+						    <a class="btn" data-toggle="modal" data-target="#myModal2">Заказать</a>
 						</div>
 					</div>
 					</div>
@@ -304,7 +320,7 @@ $this->title = 'Сайт';
 					  </div>
 					  <div class="service-footer">
 					  <h2 class="price text-center">от 6500р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+						     <a class="btn" data-toggle="modal" data-target="#myModal2">Заказать</a>
 						</div>
 					  </div>
 					</div>
@@ -339,7 +355,7 @@ $this->title = 'Сайт';
 					  </div>
 					   <div class="service-footer">
 					   <h2 class="price text-center">от 8500р. м.кв.</h2>
-						    <div class="btn">Заказать</div>
+						     <a class="btn" data-toggle="modal" data-target="#myModal2">Заказать</a>
 						</div>
 					  </div>
 					</div>
@@ -385,9 +401,9 @@ $this->title = 'Сайт';
 						<p>Присоединяйтесь к нам в соцсетях и будьте в курсе новостей!</p>
 						<p>
 							<ul class="colorlib-social-icons">
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-								<li><a href="#"><i class="icon-vk"></i></a></li>
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
+								<li><a href="https://www.instagram.com/urusov_remont_design/" target="_blank"><i class="icon-instagram"></i></a></li>
+								<li><a href="https://vk.com/id467122044" target="_blank"><i class="icon-vk"></i></a></li>
+								<li><a href="https://www.facebook.com/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%9A%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80-%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-2376096705749398/" target="_blank"><i class="icon-facebook2"></i></a></li>
 
 							</ul>
 						</p>

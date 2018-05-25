@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6, figure {
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: bottom;
-        height: 400px;
+        height: 560px;
         padding: 2em; }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner {
@@ -362,11 +362,9 @@ h1, h2, h3, h4, h5, h6, figure {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
             background: #FFCD00;
             color: #fff; }
-          #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
-            background: #000 !important; }
           @media screen and (max-width: 480px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
-              width: 100%; } }
+              width: 20%; } }
 
 .colorlib-light-grey {
   background: #fafafa; }
@@ -1357,9 +1355,7 @@ article {
 h1{
 	font-weight:600;
 }
-.appiarbox1{
-	display:none;
-}
+
 .service-block{
 	display:inline-block;
 	border: 1px solid #DADFE1;
@@ -1397,6 +1393,25 @@ h1{
     background-color:#F89406;
     color:#fff;
 }
+
+.container-fluid .btn {
+    display: block;
+    padding: 8px 16px 8px;
+    box-sizing: border-box;
+    width: 20%;
+	min-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #F9690E;
+    color: #fff;
+}
+.container-fluid .btn:hover{
+    background-color:#F89406;
+    color:#fff;
+}
+
 .service-block:hover{
 	border: 1px solid #95A5A6;
 	-webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.75);
@@ -1434,6 +1449,15 @@ a.limore, a.trigger{
 a.liless{
 	cursor: pointer;
 }
+.triggerw{
+display:block;
+width:100px;
+margin: 0 auto;
+	color:#fff;
+}
+.triggerw:hover{
+	color:#fff;
+}
 .photorow{
 	width:100%;
 }
@@ -1450,7 +1474,8 @@ a.liless{
 
 .liadvant li{
     list-style-type:none;
-		font-size:1.2em;;
+		font-size:1.1em;
+		color:#000;
 }
 .liadvant li i {
     padding-right: 10px;
@@ -1460,4 +1485,15 @@ a.liless{
 }
 .fancybox-opened .fancybox-title{
 	padding-top:12px;
+}
+.appbox{
+	background-color:#F9690E;
+	color:#fff;
+	padding:26px;
+	-webkit-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
+}
+.icon-arrow-up2{
+	color:#fff;
 }

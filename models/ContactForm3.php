@@ -8,15 +8,12 @@ use yii\base\Model;
 /**
  * ContactForm is the model behind the contact form.
  */
-class ContactForm extends Model
+class ContactForm3 extends Model
 {
     public $name;
-    public $email;
+	public $email;
 	public $phone;
-	public $service;
-    public $subject;
     public $body;
-    public $verifyCode;
 
 
     /**
@@ -26,10 +23,8 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'phone', 'service'], 'required'],
-            // email has to be a valid email address
-            ['email', 'email'],
-			[['name', 'phone', 'service', 'body'], 'string'],
+            [['name', 'phone'], 'required'],
+			[['name', 'phone', 'body'], 'string'],
             // verifyCode needs to be entered correctly
             //['verifyCode', 'captcha'],
         ];
@@ -43,11 +38,8 @@ class ContactForm extends Model
         return [
             //'verifyCode' => 'Verification Code',
 			'name' => 'Ваше имя',
-            'email' => 'Email',
             'phone' => 'Телефон для связи',
-            'service' => 'Тип дизайн-проекта',
-            //'subject' => 'Тема',
-            'body' => 'Комментарий (если нужно)',
+			'body' => 'Комментарий (если нужно)',
         ];
     }
 
@@ -59,8 +51,8 @@ class ContactForm extends Model
     public function contact($email)
     {
         if ($this->validate()) {
-            Yii::$app->mailer->compose('emailfromguest', ['service' => $this->service, 'phonefrom' => $this->phone, 'bodyfrom'=>$this->body])
-                ->setSubject('Новая заявка с сайта компании URUSOV-STROY')
+            Yii::$app->mailer->compose('emailfromguest3', ['phonefrom' => $this->phone, 'bodyfrom'=>$this->body])
+                ->setSubject('Новый заказ звонка с сайта компании URUSOV-STROY')
 				->setTo($email)
                 ->setFrom(['oc.mcdir@yandex.ru' => $this->name])
 				->setReplyTo($this->email)

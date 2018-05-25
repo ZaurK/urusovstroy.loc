@@ -9,7 +9,9 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
-
+use app\components\FBFWidget;
+use app\components\FBFWidget2;
+use app\components\FBFWidget3;
 
 AppAsset::register($this);
 ?>
@@ -25,8 +27,6 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
 	<link rel="shortcut icon" href="<?php echo Yii::$app->getHomeUrl(); ?>/favicon.ico" type="image/x-icon" />
     <?php $this->head() ?>
-	
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,7 +52,9 @@ AppAsset::register($this);
 
 	
 
-
+	<?= FBFWidget3::widget([]) ?>
+    <?= FBFWidget::widget([]) ?>
+	<?= FBFWidget2::widget([]) ?>
 
 	<?php $this->endBody() ?>
   </body>
