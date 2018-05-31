@@ -8,7 +8,9 @@ class getVideos
 {
 	public static function getLinks()
 	{
-		$rows = Video::find()->all();
+		$rows = Video::find()
+		    ->orderBy(['priority'=>SORT_DESC])
+		    ->all();
 		
 		echo '<div class="owl-carousel owl-theme">';
 		foreach($rows as $row){

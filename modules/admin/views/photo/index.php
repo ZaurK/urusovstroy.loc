@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Добавить', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    <div class="table-responsive">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -43,11 +43,18 @@ $this->params['breadcrumbs'][] = $this->title;
               },
               'filter' => Photo::getCatsList()
             ],
-
+            [
+			'attribute' =>'priority',
+			'label' => 'В приоритете',
+			'value' => function($data){
+				return ($data->priority == 1) ? 'да' : 'нет' ;
+			}
+			],
             [
                 'class' => 'yii\grid\ActionColumn',
-                'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; letter-spacing: 0.1em; max-width: 3em;'],
+                'contentOptions' => ['style' => 'white-space: nowrap; text-align: center; letter-spacing: 0.1em; max-width: 70px;'],
             ],
         ],
     ]); ?>
+    </div>
 </div>

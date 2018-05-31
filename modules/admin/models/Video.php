@@ -28,6 +28,7 @@ class Video extends \yii\db\ActiveRecord
     {
         return [
             [['vtitle', 'video_path'], 'string', 'max' => 255],
+			[['priority'], 'integer'],
         ];
     }
 
@@ -40,6 +41,7 @@ class Video extends \yii\db\ActiveRecord
             'id' => 'ID',
             'vtitle' => 'Название',
             'video_path' => 'Ссылка',
+			'priority' => 'Приоритет',
         ];
     }
 }

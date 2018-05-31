@@ -15,7 +15,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'vtitle')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'video_path')->textInput(['maxlength' => true]) ?>
-	  
+	
+	<?= $form->field($model, 'priority')->checkbox(['label'=>'В приоритете']) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

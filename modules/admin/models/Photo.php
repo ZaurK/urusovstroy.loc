@@ -31,6 +31,7 @@ class Photo extends \yii\db\ActiveRecord
         return [
             [['id_category'], 'integer'],
 			[['ptitle', 'img_path'], 'string', 'max' => 256],
+			[['priority'], integer],
 			[['id_category'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['id_category' => 'id']],
         ];
     }

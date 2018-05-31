@@ -21,6 +21,7 @@ use app\modules\admin\models\Category;
 
     <?= $form->field($model, 'ptitle')->textInput(['maxlength' => true]) ?>
 	
+	<?= $form->field($model, 'priority')->checkbox(['label'=>'В приоритете']) ?>
     <br><br>	
 	<?php
     if(isset($model->img_path) && file_exists(Yii::getAlias('@webroot/uploads/images/', $model->img_path)))
@@ -28,7 +29,8 @@ use app\modules\admin\models\Category;
         echo Html::img('@web/uploads/images/' . $model->img_path, ['style'=>'max-width:50%']);
     } 
     ?>
-    <br><br><br><br>
+	
+    <br><br>
 	
 	<?= $form->field($uploadForm, 'imageFile')->fileInput()->label('Фото в формате .jpg, .jpeg, .png') ?>
 	

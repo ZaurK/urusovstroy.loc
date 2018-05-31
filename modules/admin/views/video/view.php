@@ -33,10 +33,16 @@ $this->params['breadcrumbs'][] = $this->title;
 			[
 			'label' => 'Ссылка',
             'format' => 'raw',
-            'value' => function($data){
-                echo '<div class=""><a class="" href="'.$model->video_path.'"></a></div>';
-			},
+			'attribute'=>'video_path',
+            'value' => !empty($model->video_path) ? '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.basename($model->video_path).'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>': '',
             ],
+			[
+			'attribute' =>'priority',
+			'label' => 'В приоритете',
+			'value' => function($data){
+				return ($data->priority == 1) ? 'да' : 'нет' ;
+			}
+			]
             ],
     ]) ?>
 

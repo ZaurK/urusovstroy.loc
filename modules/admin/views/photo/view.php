@@ -45,6 +45,13 @@ $this->params['breadcrumbs'][] = $this->title;
 			},
 			 'contentOptions'=>['style'=>'max-width: 200px;'] 
             ],
+			[
+			'attribute' =>'priority',
+			'label' => 'В приоритете',
+			'value' => function($data){
+				return ($data->priority == 1) ? 'да' : 'нет' ;
+			}
+			]
         ],
     ]) ?>
 

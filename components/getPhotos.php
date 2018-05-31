@@ -22,7 +22,9 @@ class getPhotos
 	*/
 	public static function getLinks()
 	{
-		$rows = Photo::find()->all();
+		$rows = Photo::find()
+		         ->orderBy(['priority'=>SORT_DESC])
+				 ->all();
 		
 		echo '<div class="owl-carousel owl-theme">';
 		foreach($rows as $row){

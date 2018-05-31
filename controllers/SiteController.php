@@ -73,12 +73,12 @@ class SiteController extends Controller
     {
 		$this->layout='main0';
         if (!Yii::$app->user->isGuest) {
-            return $this->redirect(['admin/category/index']);
+            return $this->redirect(['admin/video/index']);
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['admin/category/index']);
+            return $this->redirect(['admin/video/index']);
         }
 
         $model->password = '';

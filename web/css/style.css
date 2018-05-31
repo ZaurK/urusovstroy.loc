@@ -1413,7 +1413,7 @@ h1{
 }
 
 .service-block:hover{
-	border: 1px solid #95A5A6;
+	border: 10px solid #95A5A6;
 	-webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.75);
 box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.75);
@@ -1496,4 +1496,18 @@ box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.75);
 }
 .icon-arrow-up2{
 	color:#fff;
+}
+.fon{
+	background:url('/web/images/img_bg_1.jpg');
+    position: relative;
+	padding-top:72px;
+}
+.fon2{
+	background:url('/web/images/img_bg_3.jpg');
+    position: relative;
+	padding-top:72px;
+}
+.service-block{
+	background-color:#fff;
+	border:10px solid #F9690E;
 }
