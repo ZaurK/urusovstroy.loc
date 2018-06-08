@@ -20,8 +20,8 @@ $('a#aphotorow').on('click', function(){
    $('html,body').stop().animate({ scrollTop: $('#photorow').offset().top }, 1000);
 });
 
-$('a#colorlibfooter').on('click', function(){
-   $('html,body').stop().animate({ scrollTop: $('#colorlib-footer').offset().top }, 1000);
+$('a#zzfooter').on('click', function(){
+   $('html,body').stop().animate({ scrollTop: $('#zz-footer').offset().top }, 1000);
 });
 
 });

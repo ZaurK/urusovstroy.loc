@@ -24,7 +24,7 @@ class AppAsset extends AssetBundle
         'css/animate.css',
         'css/icomoon.css',
         'css/bootstrap.css',
-        'css/magnific-popup.css',
+        //'css/magnific-popup.css',
         'css/flexslider.css',
         'css/owl.carousel.css',
         'css/owl.theme.css',

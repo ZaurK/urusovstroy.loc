@@ -53,6 +53,13 @@ $config = [
                 'password' => 'oc_2017',
                 'port' => '465',
                 'encryption' => 'ssl',
+				'streamOptions' => [
+                    'ssl' => [
+                        'allow_self_signed' => true,
+                        'verify_peer' => false,
+                        'verify_peer_name' => false,
+                    ],
+                ],
             ],
         ],
         'log' => [
@@ -72,6 +79,7 @@ $config = [
             'rules' => [
 			     '' => 'site/index',
                 '<action>'=>'site/<action>',
+				'admin' => 'site/login',
 
             ],
         ],

@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: $brand-primary;
 }
 
-.colorlib-nav {
+.zz-nav {
 	margin: 0;
 	position: absolute;
 	top: 0;
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 
 	}
-	#colorlib-logo {
+	#zz-logo {
 		font-size: 24px;
 		margin: 0;
 		padding: 0;
@@ -316,15 +316,15 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#colorlib-counter,
-.colorlib-bg{
+#zz-counter,
+.zz-bg{
 	background-size: cover;
 	background-position: top center;
 	background-repeat: no-repeat;
 	position: relative;
 }
 
-.colorlib-video {
+.zz-video {
 	overflow: hidden;
 	@media screen and (max-width: $screen-md){
 		height: 450px;
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#colorlib-hero {
+#zz-hero {
 	min-height: 700px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	width: 100%;
@@ -494,7 +494,7 @@ h1, h2, h3, h4, h5, h6, figure {
 						font-size: 30px;
 					}
 				}s
-				.colorlib-lead{
+				.zz-lead{
 					font-size: 20px;
 					color: $brand-primary;
 					.icon-heart {
@@ -527,20 +527,20 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 
-.colorlib-light-grey{
+.zz-light-grey{
 	background: lighten($brand-black,98%);
 }
 
-#colorlib-intro,
-#colorlib-about,
-#colorlib-services,
-#colorlib-contact,
-#colorlib-testimony,
-#colorlib-blog,
-#colorlib-project,
-#colorlib-counter,
-#colorlib-subscribe,
-#colorlib-footer,{
+#zz-intro,
+#zz-about,
+#zz-services,
+#zz-contact,
+#zz-testimony,
+#zz-blog,
+#zz-project,
+#zz-counter,
+#zz-subscribe,
+#zz-footer,{
 	padding: 7em 0;
 	clear: both;
 	@media screen and (max-width: $screen-sm) {
@@ -548,7 +548,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 
-#colorlib-intro{
+#zz-intro{
 	padding-top: 7em;
 	padding-bottom: 0;
 	.box{
@@ -628,7 +628,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 
 // CAROUSEL
-#colorlib-project{
+#zz-project{
 	.owl-carousel{
 		// margin-bottom: 5em;
 	}
@@ -834,7 +834,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 //TESTIMONY
-#colorlib-testimony{
+#zz-testimony{
 	position: relative;
 	.icon{
 		position: absolute;
@@ -989,10 +989,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 // Counters
-#colorlib-counter{
+#zz-counter{
 	position: relative;
 }
-.colorlib-counters {
+.zz-counters {
 	padding: 3em 0;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1026,7 +1026,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	.counter-wrap{
 		border: 1px solid red !important;
 	}
-	.colorlib-counter {
+	.zz-counter {
 		font-size: 40px;
 		display: block;
 		color: rgba($brand-white,1);
@@ -1035,7 +1035,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		font-weight: 700;
 		margin-bottom: .3em;
 	}
-	.colorlib-counter-label {
+	.zz-counter-label {
 		color: rgba($brand-white,.7);
 		text-transform: uppercase;
 		font-size: 14px;
@@ -1294,7 +1294,7 @@ input[type="text"] {
 }
 
 
-.colorlib-social-icons {
+.zz-social-icons {
 	margin: 0;
 	padding: 0;
 	li {
@@ -1315,7 +1315,7 @@ input[type="text"] {
 }
 
 
-.colorlib-heading {
+.zz-heading {
 	margin-bottom: 5em;
 	.sm{
 		font-size: 16px;
@@ -1348,11 +1348,11 @@ input[type="text"] {
 	}
 }
 
-#colorlib-subscribe{
+#zz-subscribe{
 	padding: 4em 0;
 	color: $brand-white;
 	background: $brand-primary;
-	.colorlib-heading{
+	.zz-heading{
 		margin-bottom: 0;
 		h2{
 			color: $brand-white !important;
@@ -1415,10 +1415,10 @@ input[type="text"] {
 }
 
 
-#colorlib-footer {
+#zz-footer {
 	background: $brand-footer-color;
 	color: rgba($brand-white,.6)!important;
-	.colorlib-footer-links {
+	.zz-footer-links {
 		padding: 0;
 		margin: 0;
 		@media screen and(max-width: $screen-sm){
@@ -1446,7 +1446,7 @@ input[type="text"] {
 			}
 		}
 	}
-	.colorlib-social-icons {
+	.zz-social-icons {
 		li {
 			a {
 				padding-left: 10px;
@@ -1479,7 +1479,7 @@ input[type="text"] {
 }
 
 // off canvas
-#colorlib-offcanvas {
+#zz-offcanvas {
 	position: absolute;
 	z-index: 1901;
 	width: 270px;
@@ -1582,7 +1582,7 @@ input[type="text"] {
 
 
 // Burger Menu
-.colorlib-nav-toggle {
+.zz-nav-toggle {
   width:25px;
   height:25px;
   cursor: pointer;
@@ -1618,7 +1618,7 @@ input[type="text"] {
 		  transition:all .2s ease-out;
 	  }
   }
-  &.colorlib-nav-white {
+  &.zz-nav-white {
   	> i {
   		color:$brand-white;
   		background: $brand-white;
@@ -1629,22 +1629,22 @@ input[type="text"] {
   }
 }
 
-.colorlib-nav-toggle i::before {
+.zz-nav-toggle i::before {
   top: -7px;
 }
-.colorlib-nav-toggle i::after {
+.zz-nav-toggle i::after {
   bottom: -7px;
 }
-.colorlib-nav-toggle:hover i::before {
+.zz-nav-toggle:hover i::before {
   top: -10px;
 }
-.colorlib-nav-toggle:hover i::after {
+.zz-nav-toggle:hover i::after {
   bottom: -10px;
 }
-.colorlib-nav-toggle.active i {
+.zz-nav-toggle.active i {
 	background: transparent;
 }
-.colorlib-nav-toggle.active i::before {
+.zz-nav-toggle.active i::before {
   top:0;
   -webkit-transform: rotateZ(45deg);
      -moz-transform: rotateZ(45deg);
@@ -1653,7 +1653,7 @@ input[type="text"] {
           transform: rotateZ(45deg);
           background: $brand-white;
 }
-.colorlib-nav-toggle.active i::after {
+.zz-nav-toggle.active i::after {
   bottom:0;
   -webkit-transform: rotateZ(-45deg);
      -moz-transform: rotateZ(-45deg);
@@ -1662,7 +1662,7 @@ input[type="text"] {
           transform: rotateZ(-45deg);
           background: $brand-white;
 }
-.colorlib-nav-toggle {
+.zz-nav-toggle {
   position: absolute;
   right: 0px;
   top: 65px;
@@ -1854,7 +1854,7 @@ input[type="text"] {
    margin: 0 !important;
 }
 
-.colorlib-loader {
+.zz-loader {
 	position: fixed;
 	left: 0px;
 	top: 0px;

@@ -11,12 +11,12 @@ use app\components\getVideos;
 $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн интерьера, Нальчик ';
 ?>
 
-        <nav class="colorlib-nav" role="navigation">
+        <nav class="zz-nav" role="navigation">
 			<div class="top-menu">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="<?=Yii::$app->homeUrl?>"><img src='<?=Yii::$app->homeUrl?>/images/logo.png'></a></div>
+							<div id="zz-logo"><a href="<?=Yii::$app->homeUrl?>"><img src='<?=Yii::$app->homeUrl?>/images/logo.png'></a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
@@ -29,16 +29,16 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 									</ul>
 								</li>
 								<li><a href="#advantages" id="aadvantages">Преимущества</a></li>
-								<li><a href="#" id="avideorow">Видео</a></li>
+								<li><a href="#videorow" id="avideorow">Видео</a></li>
 								<li><a href="#photorow" id="aphotorow">Фото</a></li>
-								<li><a href="#colorlib-footer" id="colorlibfooter">Контакты</a></li>
+								<li><a href="#zz-footer" id="zzfooter">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
-		<div id="colorlib-hero">
+		<div id="zz-hero">
 			<div class="flexslider">
 				<ul class="slides">
 			   	<li style="background-image: url(<?=Yii::$app->homeUrl?>/images/img_bg_1.jpg);">
@@ -93,7 +93,7 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 		    <div class="container">
 			    <div class="row margin-bottom72">
 				     <div class="col-md-4 text-center">
-					     <img src="<?=Yii::$app->homeUrl?>/images/urusov-stroy.jpg">
+					     <img src="<?=Yii::$app->homeUrl?>/images/urusov-stroy.png"><br><br>
 					 </div>
 				     <div class="col-md-8 text-left">
 		<p>
@@ -106,6 +106,9 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 		        </div>
 		    </div>
 		</div>
+		<div class="videorow margin-bottom72" id="videorow">			
+		        <?=getVideos::getLinks()?>
+		    </div>
         <div id="design-project">
 		    <div class="container">
 				<div class="row margin-bottom36">
@@ -114,7 +117,7 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 					</div>
 		        </div>
 				<div class="row">
-				    <div class="col-md-12 text-center animate-box">
+				    <div class="col-md-12 text-center">
 					    <h1>Дизайн-проект</h1>
 					</div>
 		        </div>
@@ -241,10 +244,10 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 
         <div id="remont-project">
 		    <div class="container">
-				<div class="row margin-bottom36">
+				<div class="row ">
 		        </div>
 				<div class="row">
-				    <div class="col-md-12 text-center animate-box">
+				    <div class="col-md-12 text-center">
 					    <h1>Ремонт квартир и домов</h1>
 					</div>
 		        </div>
@@ -368,15 +371,13 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 		    </div>
 
 				
-			<div class="videorow" id="videorow">			
-		        <?=getVideos::getLinks()?>
-		    </div>
+			
          <div id="advantages">
 		    <div class="container">
 				<div class="row margin-bottom72">
 		        </div>
 				<div class="row">
-				    <div class="col-md-12 text-center animate-box">
+				    <div class="col-md-12 text-center">
 					    <h1>Наши преимущества</h1>
 					</div>
 		        </div>
@@ -399,14 +400,14 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 		 <div class="photorow margin-bottom72" id="photorow">			
 		        <?=getPhotos::getLinks()?>
 		    </div>
-		<footer id="colorlib-footer" role="contentinfo">
+		<footer id="zz-footer" role="contentinfo">
 			<div class="container">
 				<div class="row row-pb-md">
-					<div class="col-md-4 colorlib-widget">
+					<div class="col-md-4 zz-widget">
 						<h4>Мы в соцсетях</h4>
 						<p>Присоединяйтесь к нам в соцсетях и будьте в курсе новостей!</p>
 						<p>
-							<ul class="colorlib-social-icons">
+							<ul class="zz-social-icons">
 								<li><a href="https://www.instagram.com/urusov_remont_design/" target="_blank"><i class="icon-instagram"></i></a></li>
 								<li><a href="https://vk.com/id467122044" target="_blank"><i class="icon-vk"></i></a></li>
 								<li><a href="https://www.facebook.com/%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%9A%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D0%98%D0%BD%D1%82%D0%B5%D1%80%D1%8C%D0%B5%D1%80-%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-2376096705749398/" target="_blank"><i class="icon-facebook2"></i></a></li>
@@ -415,10 +416,10 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 						</p>
 					</div>
 					
-					<div class="col-md-4  col-md-push-1 colorlib-widget">
+					<div class="col-md-4  col-md-push-1 zz-widget">
 						<h4>Информация</h4>
 						<p>
-							<ul class="colorlib-footer-links">
+							<ul class="zz-footer-links">
 								<li><a href="#" id="adesignproject"><i class="icon-check"></i> Услуги</a></li>
 								<li><a href="#" id="aadvantages"><i class="icon-check"></i> Преимущества</a></li>
 								<li><a href="#" id="avideorow"><i class="icon-check"></i> Видео</a></li>
@@ -432,7 +433,7 @@ $this->title = 'URUSOV-STROY | Ремонт квартир, дизайн инт�
 
 					<div class="col-md-4 col-md-push-1">
 						<h4>Контакты</h4>
-						<ul class="colorlib-footer-links">
+						<ul class="zz-footer-links">
 							<li><a href="tel://1234567920"><i class="icon-mobile2"></i> + 7 (929) 885 75 75</a></li>
 							<li><a href="mailto:info@yoursite.com"><i class="icon-mail2"></i> urusovstroy@mail.ru</a></li>							
 						</ul>

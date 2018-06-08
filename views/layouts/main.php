@@ -39,7 +39,7 @@ AppAsset::register($this);
   <body>
   
   <?php $this->beginBody() ?>
-    <div class="colorlib-loader"></div>
+    <div class="zz-loader"></div>
 
 	<div id="page">
 	<?= $content?>			
