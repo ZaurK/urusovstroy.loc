@@ -68,6 +68,7 @@ class VideoController extends Controller
         $model = new Video();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', "Ссылка на видео успешно добавлена");
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -88,6 +89,7 @@ class VideoController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', "Ссылка на видео успешно обновлена");
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -106,7 +108,7 @@ class VideoController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+        Yii::$app->session->setFlash('success', "Ссылка на видео успешно удалена");
         return $this->redirect(['index']);
     }
 
